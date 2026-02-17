@@ -23,8 +23,8 @@ const scriptMatch = html.match(/<script[^>]*>([\s\S]*?)<\/script>/);
 let jsContent = '';
 if (scriptMatch) {
     jsContent = scriptMatch[1].trim();
-    // 去掉 sourcemap 注释
-    jsContent = jsContent.replace(/\/\/# sourceMappingURL=.*$/, '').trim();
+    // 去掉所有 sourcemap 注释（包括内联 base64 的）
+    jsContent = jsContent.replace(/\/\/# sourceMappingURL=[^\n]*/g, '').trim();
 }
 
 // 从 HTML 中移除 <script>...</script> 标签

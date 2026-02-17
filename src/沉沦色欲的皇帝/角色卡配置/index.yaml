@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
+版本: 2.0.0
+作者: Gssip
+
+# ===== 世界书 =====
+世界书名称: 与角色卡名称相同
+条目:
+  - 文件夹: 变量
+    条目:
+      - 名称: '[mvu_update]变量输出规则'
+        启用: true
+        激活策略:
+          类型: 蓝灯
+        插入位置:
+          类型: 指定深度
+          角色: 系统
+          深度: 0
+          顺序: 14720
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <变量输出规则>
+          ## 强制输出格式
+
+          你的每一条回复都必须严格按照以下结构输出，不可缺少任何组件：
+
+          ### 1. 时间栏
+          在回复**最前面**输出时间栏，格式严格如下：
+          ☞年号纪年-月日-天气-时辰-地点-氛围描述☜
+
+          ### 2. 正文
+          时间栏之后，用 <maintext></maintext> 标签包裹全部剧情正文。
+
+          ### 3. 本轮小总结
+          正文之后，用 <sum></sum> 标签包裹本轮剧情摘要（约20-30字）。
+
+          ### 4. 变量更新
+          使用JSONPatch格式，只更新本轮发生变化的变量。
+          <UpdateVariable>
+          <JSONPatch>
+          [
+            { "op": "replace", "path": "/路径", "value": 值 }
+          ]
+          </JSONPatch>
+          </UpdateVariable>
+
+          ### 5. 状态栏占位符
+          最后一行输出：<StatusPlaceHolderImpl/>
+          </变量输出规则>
+
+      - 名称: '[mvu_update]正文模板'
+        启用: true
+        激活策略:
+          类型: 蓝灯
+        插入位置:
+          类型: 指定深度
+          角色: 系统
+          深度: 0
+          顺序: 14720
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        文件: 世界书/正文模板
+
+# ===== 正则 =====
+扩展字段:
+  正则:
+    - 正则名称: '[界面]同层前端卡'
+      启用: true
+      查找表达式: <StatusPlaceHolderImpl/>
+      内容: |-
+        ```
+        <body>
+        <script>
+        $('body').load('https://testingcf.jsdelivr.net/gh/Gssip/emperor-card/dist/沉沦色欲的皇帝/index.html')
+        </script>
+        </body>
+        ```
+      来源:
+        用户输入: false
+        AI输出: true
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+  酒馆助手:
+    脚本库:
+      - 名称: mvu
+        启用: true
+        类型: 脚本
+        内容: |-
+          import 'https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js';

@@ -1,0 +1,40 @@
+<正文模板>
+## AI 输出结构模板
+
+每一条 AI 回复必须严格按照以下顺序输出：
+
+```
+☞{年号纪年}-{月日}-{天气}-{时辰}-{地点}-{氛围}☜
+
+<maintext>
+（详细剧情描写，不少于300字）
+</maintext>
+
+<sum>
+（本轮剧情摘要，约20-30字）
+</sum>
+
+<UpdateVariable>
+<JSONPatch>
+[
+  { "op": "replace", "path": "/变量路径", "value": 新值 }
+]
+</JSONPatch>
+</UpdateVariable>
+<StatusPlaceHolderImpl/>
+```
+
+各部分说明：
+- ☞时间栏☜ → 前端解析为顶部时间栏
+- <maintext> → 前端提取为正文区域
+- <sum> → 前端提取为编年史记录
+- <UpdateVariable> → MVU框架解析为变量更新
+- <StatusPlaceHolderImpl/> → 正则替换为同层界面
+
+约束：
+1. 不可省略任何组件
+2. 保持顺序：时间栏→正文→小总结→变量更新→占位符
+3. 正文质量必须高，不是流水账
+4. 小总结不超过30字
+5. 只更新本轮实际变化的变量
+</正文模板>

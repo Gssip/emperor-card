@@ -598,9 +598,25 @@ function init() {
     renderCharStatus();
 }
 
-// 兼容初始化：酒馆中用 $()，独立浏览器用 DOMContentLoaded
+// 兼容初始化：酒馆中需等待正则注入 HTML 后再初始化，独立浏览器用 DOMContentLoaded
 if (isInTavern) {
-    $(() => init());
+    // 等待正则替换将 HTML 元素注入到页面后再初始化
+    // 正则在消息渲染时触发，可能晚于脚本加载
+    let waitAttempts = 0;
+    const maxAttempts = 60; // 最多等 30 秒（每 500ms 检查一次）
+    const waitForDOM = () => {
+        const startScreen = document.getElementById('start-screen');
+        if (startScreen) {
+            console.log('[皇帝卡] DOM 元素已就绪，开始初始化');
+            init();
+        } else if (waitAttempts < maxAttempts) {
+            waitAttempts++;
+            setTimeout(waitForDOM, 500);
+        } else {
+            console.warn('[皇帝卡] 等待 DOM 元素超时（30秒），HTML 可能未通过正则注入');
+        }
+    };
+    $(() => waitForDOM());
     $(window).on('pagehide', () => { /* 清理工作 */ });
 } else {
     if (document.readyState === 'loading') {
