@@ -91,3 +91,24 @@
         类型: 脚本
         内容: |-
           import 'https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js';
+
+      - 名称: 皇帝卡脚本
+        启用: true
+        类型: 脚本
+        内容: |-
+          import 'https://testingcf.jsdelivr.net/gh/Gssip/emperor-card/dist/沉沦色欲的皇帝/index.js';
+
+      - 名称: 隐藏楼层
+        启用: true
+        类型: 脚本
+        内容: |-
+          $(() => {
+            $('#chat > .mes').not('.last_mes').remove();
+            let current_chat_id = SillyTavern.getCurrentChatId();
+            eventOn(tavern_events.CHAT_CHANGED, chat_id => {
+              if (current_chat_id !== chat_id) {
+                current_chat_id = chat_id;
+                reloadIframe();
+              }
+            });
+          });
