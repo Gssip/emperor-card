@@ -19,13 +19,20 @@ importers:
         version: 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
       '@vueuse/integrations':
         specifier: ^13.9.0
+<<<<<<< HEAD
         version: 13.9.0(axios@1.14.1)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+=======
+        version: 13.9.0(axios@1.14.0)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       '@vueuse/shared':
         specifier: ^13.9.0
         version: 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
       async-wait-until:
         specifier: ^2.0.31
         version: 2.0.31
+      axios:
+        specifier: 1.14.0
+        version: 1.14.0
       compare-versions:
         specifier: ^6.1.1
         version: 6.1.1
@@ -73,7 +80,11 @@ importers:
         version: 3.5.31(typescript@6.0.0-dev.20250807)
       vue-final-modal:
         specifier: ^4.5.5
+<<<<<<< HEAD
         version: 4.5.5(@vueuse/core@13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807)))(@vueuse/integrations@13.9.0(axios@1.14.1)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)))(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+=======
+        version: 4.5.5(@vueuse/core@13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807)))(@vueuse/integrations@13.9.0(axios@1.14.0)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)))(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       vue-router:
         specifier: ^4.6.4
         version: 4.6.4(vue@3.5.31(typescript@6.0.0-dev.20250807))
@@ -804,10 +815,21 @@ packages:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
       typescript: '>=4.8.4 <6.1.0'
 
+<<<<<<< HEAD
   '@typescript-eslint/types@8.58.0':
     resolution: {integrity: sha512-O9CjxypDT89fbHxRfETNoAnHj/i6IpRK0CvbVN3qibxlLdo5p5hcLmUuCCrHMpxiWSwKyI8mCP7qRNYuOJ0Uww==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+=======
+  '@typescript-eslint/types@8.57.1':
+    resolution: {integrity: sha512-S29BOBPJSFUiblEl6RzPPjJt6w25A6XsBqRVDt53tA/tlL8q7ceQNZHTjPeONt/3S7KRI4quk+yP9jK2WjBiPQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript-eslint/types@8.58.0':
+    resolution: {integrity: sha512-O9CjxypDT89fbHxRfETNoAnHj/i6IpRK0CvbVN3qibxlLdo5p5hcLmUuCCrHMpxiWSwKyI8mCP7qRNYuOJ0Uww==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
   '@typescript-eslint/typescript-estree@8.58.0':
     resolution: {integrity: sha512-7vv5UWbHqew/dvs+D3e1RvLv1v2eeZ9txRHPnEEBUgSNLx5ghdzjHa0sgLWYVKssH+lYmV0JaWdoubo0ncGYLA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1283,8 +1305,13 @@ packages:
     resolution: {integrity: sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==}
     deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
 
+<<<<<<< HEAD
   axios@1.14.1:
     resolution: {integrity: sha512-vF/aB4vrIzLyOb2TB9gpuE8gusNHpZqk2ZZcAqSnRjW5IcY7tFSBEurD2tbakohj0Rw5xMHYwjSqOGSfr0iewA==}
+=======
+  axios@1.14.0:
+    resolution: {integrity: sha512-3Y8yrqLSwjuzpXuZ0oIYZ/XGgLwUIBU3uLvbcpb0pidD9ctpShJd43KSlEEkVQg6DS0G9NKyzOvBfUtDKEyHvQ==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
@@ -1300,8 +1327,13 @@ packages:
     resolution: {integrity: sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog==}
     engines: {node: ^4.5.0 || >= 5.9}
 
+<<<<<<< HEAD
   baseline-browser-mapping@2.10.12:
     resolution: {integrity: sha512-qyq26DxfY4awP2gIRXhhLWfwzwI+N5Nxk6iQi8EFizIaWIjqicQTE4sLnZZVdeKPRcVNoJOkkpfzoIYuvCKaIQ==}
+=======
+  baseline-browser-mapping@2.10.10:
+    resolution: {integrity: sha512-sUoJ3IMxx4AyRqO4MLeHlnGDkyXRoUG0/AI9fjK+vS72ekpV0yWVY7O0BVjmBcRtkNcsAO2QDZ4tdKKGoI6YaQ==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -1324,8 +1356,13 @@ packages:
   brace-expansion@1.1.13:
     resolution: {integrity: sha512-9ZLprWS6EENmhEOpjCYW2c8VkmOvckIJZfkr7rBW6dObmfgJ/L1GpSYW5Hpo9lDz4D1+n0Ckz8rU7FwHDQiG/w==}
 
+<<<<<<< HEAD
   brace-expansion@5.0.5:
     resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
+=======
+  brace-expansion@5.0.4:
+    resolution: {integrity: sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     engines: {node: 18 || 20 || >=22}
 
   braces@3.0.3:
@@ -1359,8 +1396,13 @@ packages:
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
 
+<<<<<<< HEAD
   caniuse-lite@1.0.30001782:
     resolution: {integrity: sha512-dZcaJLJeDMh4rELYFw1tvSn1bhZWYFOt468FcbHHxx/Z/dFidd1I6ciyFdi3iwfQCyOjqo9upF6lGQYtMiJWxw==}
+=======
+  caniuse-lite@1.0.30001780:
+    resolution: {integrity: sha512-llngX0E7nQci5BPJDqoZSbuZ5Bcs9F5db7EtgfwBerX9XGtkkiO4NwfDDIRzHTTwcYC8vC7bmeUEPGrKlR/TkQ==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1730,8 +1772,13 @@ packages:
   earcut@3.0.2:
     resolution: {integrity: sha512-X7hshQbLyMJ/3RPhyObLARM2sNxxmRALLKx1+NVFFnQ9gKzmCrxm9+uLIAdBcvc8FNLpctqlQ2V6AE92Ol9UDQ==}
 
+<<<<<<< HEAD
   electron-to-chromium@1.5.329:
     resolution: {integrity: sha512-/4t+AS1l4S3ZC0Ja7PHFIWeBIxGA3QGqV8/yKsP36v7NcyUCl+bIcmw6s5zVuMIECWwBrAK/6QLzTmbJChBboQ==}
+=======
+  electron-to-chromium@1.5.321:
+    resolution: {integrity: sha512-L2C7Q279W2D/J4PLZLk7sebOILDSWos7bMsMNN06rK482umHUrh/3lM8G7IlHFOYip2oAg5nha1rCMxr/rs6ZQ==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2591,8 +2638,13 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
+<<<<<<< HEAD
   libphonenumber-js@1.12.41:
     resolution: {integrity: sha512-lsmMmGXBxXIK/VMLEj0kL6MtUs1kBGj1nTCzi6zgQoG1DEwqwt2DQyHxcLykceIxAnfE3hya7NuIh6PpC6S3fA==}
+=======
+  libphonenumber-js@1.12.40:
+    resolution: {integrity: sha512-HKGs7GowShNls3Zh+7DTr6wYpPk5jC78l508yQQY3e8ZgJChM3A9JZghmMJZuK+5bogSfuTafpjksGSR3aMIEg==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
@@ -2872,8 +2924,13 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+<<<<<<< HEAD
   minimatch@10.2.5:
     resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
+=======
+  minimatch@10.2.4:
+    resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     engines: {node: 18 || 20 || >=22}
 
   minimatch@3.1.5:
@@ -3795,8 +3852,13 @@ packages:
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
+<<<<<<< HEAD
   undici@7.24.6:
     resolution: {integrity: sha512-Xi4agocCbRzt0yYMZGMA6ApD7gvtUFaxm4ZmeacWI4cZxaF6C+8I8QfofC20NAePiB/IcvZmzkJ7XPa471AEtA==}
+=======
+  undici@7.24.5:
+    resolution: {integrity: sha512-3IWdCpjgxp15CbJnsi/Y9TCDE7HWVN19j1hmzVhoAkY/+CJx449tVxT5wZc1Gwg8J+P0LWvzlBzxYRnHJ+1i7Q==}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     engines: {node: '>=20.18.1'}
 
   unified@11.0.5:
@@ -4552,7 +4614,11 @@ snapshots:
   '@types/webpack@5.28.5(webpack-cli@6.0.1)':
     dependencies:
       '@types/node': 25.5.0
+<<<<<<< HEAD
       tapable: 2.3.2
+=======
+      tapable: 2.3.0
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       webpack: 5.105.4(webpack-cli@6.0.1)
     transitivePeerDependencies:
       - '@swc/core'
@@ -4628,8 +4694,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   '@typescript-eslint/types@8.58.0': {}
 
+=======
+  '@typescript-eslint/types@8.57.1': {}
+
+  '@typescript-eslint/types@8.58.0': {}
+
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
   '@typescript-eslint/typescript-estree@8.58.0(typescript@6.0.0-dev.20250807)':
     dependencies:
       '@typescript-eslint/project-service': 8.58.0(typescript@6.0.0-dev.20250807)
@@ -4637,7 +4710,11 @@ snapshots:
       '@typescript-eslint/types': 8.58.0
       '@typescript-eslint/visitor-keys': 8.58.0
       debug: 4.4.3
+<<<<<<< HEAD
       minimatch: 10.2.5
+=======
+      minimatch: 10.2.4
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       semver: 7.7.4
       tinyglobby: 0.2.15
       ts-api-utils: 2.5.0(typescript@6.0.0-dev.20250807)
@@ -4826,13 +4903,21 @@ snapshots:
       '@vueuse/shared': 14.2.1(vue@3.5.31(typescript@6.0.0-dev.20250807))
       vue: 3.5.31(typescript@6.0.0-dev.20250807)
 
+<<<<<<< HEAD
   '@vueuse/integrations@13.9.0(axios@1.14.1)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))':
+=======
+  '@vueuse/integrations@13.9.0(axios@1.14.0)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))':
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     dependencies:
       '@vueuse/core': 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
       '@vueuse/shared': 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
       vue: 3.5.31(typescript@6.0.0-dev.20250807)
     optionalDependencies:
+<<<<<<< HEAD
       axios: 1.14.1
+=======
+      axios: 1.14.0
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       focus-trap: 7.6.5
 
   '@vueuse/metadata@10.11.1': {}
@@ -5086,7 +5171,11 @@ snapshots:
   autoprefixer@10.4.27(postcss@8.5.8):
     dependencies:
       browserslist: 4.28.1
+<<<<<<< HEAD
       caniuse-lite: 1.0.30001782
+=======
+      caniuse-lite: 1.0.30001780
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       fraction.js: 5.3.4
       picocolors: 1.1.1
       postcss: 8.5.8
@@ -5102,11 +5191,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   axios@1.14.1:
     dependencies:
       follow-redirects: 1.15.11
       form-data: 4.0.5
       plain-crypto-js: 4.2.1
+=======
+  axios@1.14.0:
+    dependencies:
+      follow-redirects: 1.15.11
+      form-data: 4.0.5
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       proxy-from-env: 2.1.0
     transitivePeerDependencies:
       - debug
@@ -5119,7 +5215,11 @@ snapshots:
 
   base64id@2.0.0: {}
 
+<<<<<<< HEAD
   baseline-browser-mapping@2.10.12: {}
+=======
+  baseline-browser-mapping@2.10.10: {}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   batch@0.6.1: {}
 
@@ -5136,7 +5236,11 @@ snapshots:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
+<<<<<<< HEAD
   brace-expansion@5.0.5:
+=======
+  brace-expansion@5.0.4:
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
     dependencies:
       balanced-match: 4.0.4
 
@@ -5146,9 +5250,15 @@ snapshots:
 
   browserslist@4.28.1:
     dependencies:
+<<<<<<< HEAD
       baseline-browser-mapping: 2.10.12
       caniuse-lite: 1.0.30001782
       electron-to-chromium: 1.5.329
+=======
+      baseline-browser-mapping: 2.10.10
+      caniuse-lite: 1.0.30001780
+      electron-to-chromium: 1.5.321
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       node-releases: 2.0.36
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
@@ -5178,7 +5288,11 @@ snapshots:
       pascal-case: 3.1.2
       tslib: 2.8.1
 
+<<<<<<< HEAD
   caniuse-lite@1.0.30001782: {}
+=======
+  caniuse-lite@1.0.30001780: {}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   ccount@2.0.1: {}
 
@@ -5244,7 +5358,11 @@ snapshots:
       parse5: 7.3.0
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
+<<<<<<< HEAD
       undici: 7.24.6
+=======
+      undici: 7.24.5
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       whatwg-mimetype: 4.0.0
 
   chokidar@3.6.0:
@@ -5270,7 +5388,11 @@ snapshots:
   class-validator@0.14.3:
     dependencies:
       '@types/validator': 13.15.10
+<<<<<<< HEAD
       libphonenumber-js: 1.12.41
+=======
+      libphonenumber-js: 1.12.40
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       validator: 13.15.26
 
   clean-css@5.3.3:
@@ -5597,7 +5719,11 @@ snapshots:
 
   earcut@3.0.2: {}
 
+<<<<<<< HEAD
   electron-to-chromium@1.5.329: {}
+=======
+  electron-to-chromium@1.5.321: {}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   emoji-regex@8.0.0: {}
 
@@ -5786,13 +5912,22 @@ snapshots:
   eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.58.0(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.0-dev.20250807))(eslint@9.39.4(jiti@2.6.1)):
     dependencies:
       '@package-json/types': 0.0.12
+<<<<<<< HEAD
       '@typescript-eslint/types': 8.58.0
       comment-parser: 1.4.6
+=======
+      '@typescript-eslint/types': 8.57.1
+      comment-parser: 1.4.5
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       debug: 4.4.3
       eslint: 9.39.4(jiti@2.6.1)
       eslint-import-context: 0.1.9(unrs-resolver@1.11.1)
       is-glob: 4.0.3
+<<<<<<< HEAD
       minimatch: 10.2.5
+=======
+      minimatch: 10.2.4
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       semver: 7.7.4
       stable-hash-x: 0.2.0
       unrs-resolver: 1.11.1
@@ -6582,7 +6717,11 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
+<<<<<<< HEAD
   libphonenumber-js@1.12.41: {}
+=======
+  libphonenumber-js@1.12.40: {}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   lightningcss-android-arm64@1.32.0:
     optional: true
@@ -6921,6 +7060,7 @@ snapshots:
   mini-css-extract-plugin@2.10.2(webpack@5.105.4):
     dependencies:
       schema-utils: 4.3.3
+<<<<<<< HEAD
       tapable: 2.3.2
       webpack: 5.105.4(webpack-cli@6.0.1)
 
@@ -6931,6 +7071,18 @@ snapshots:
   minimatch@3.1.5:
     dependencies:
       brace-expansion: 1.1.13
+=======
+      tapable: 2.3.0
+      webpack: 5.105.4(webpack-cli@6.0.1)
+
+  minimatch@10.2.4:
+    dependencies:
+      brace-expansion: 5.0.4
+
+  minimatch@3.1.5:
+    dependencies:
+      brace-expansion: 1.1.12
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   minimist@1.2.8: {}
 
@@ -7402,7 +7554,11 @@ snapshots:
 
   remote-content@4.0.1:
     dependencies:
+<<<<<<< HEAD
       axios: 1.14.1
+=======
+      axios: 1.14.0
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
@@ -7816,7 +7972,11 @@ snapshots:
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.20.1
+<<<<<<< HEAD
       tapable: 2.3.2
+=======
+      tapable: 2.3.0
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       tsconfig-paths: 4.2.0
 
   tsconfig-paths@4.2.0:
@@ -7900,7 +8060,11 @@ snapshots:
 
   undici-types@7.18.2: {}
 
+<<<<<<< HEAD
   undici@7.24.6: {}
+=======
+  undici@7.24.5: {}
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
 
   unified@11.0.5:
     dependencies:
@@ -7958,7 +8122,11 @@ snapshots:
     dependencies:
       local-pkg: 1.1.2
       magic-string: 0.30.21
+<<<<<<< HEAD
       picomatch: 4.0.4
+=======
+      picomatch: 4.0.3
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       unimport: 5.7.0
       unplugin: 2.3.11
       unplugin-utils: 0.3.1
@@ -7990,7 +8158,11 @@ snapshots:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       acorn: 8.16.0
+<<<<<<< HEAD
       picomatch: 4.0.4
+=======
+      picomatch: 4.0.3
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       webpack-virtual-modules: 0.6.2
 
   unquote@1.1.1: {}
@@ -8080,10 +8252,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   vue-final-modal@4.5.5(@vueuse/core@13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807)))(@vueuse/integrations@13.9.0(axios@1.14.1)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)))(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)):
     dependencies:
       '@vueuse/core': 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
       '@vueuse/integrations': 13.9.0(axios@1.14.1)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+=======
+  vue-final-modal@4.5.5(@vueuse/core@13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807)))(@vueuse/integrations@13.9.0(axios@1.14.0)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)))(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807)):
+    dependencies:
+      '@vueuse/core': 13.9.0(vue@3.5.31(typescript@6.0.0-dev.20250807))
+      '@vueuse/integrations': 13.9.0(axios@1.14.0)(focus-trap@7.6.5)(vue@3.5.31(typescript@6.0.0-dev.20250807))
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       focus-trap: 7.6.5
       vue: 3.5.31(typescript@6.0.0-dev.20250807)
 
@@ -8196,7 +8375,11 @@ snapshots:
       mime-types: 2.1.35
       neo-async: 2.6.2
       schema-utils: 4.3.3
+<<<<<<< HEAD
       tapable: 2.3.2
+=======
+      tapable: 2.3.0
+>>>>>>> 9dbfce4f3a8e36fe5fb6a7eb6d355d67cbde74aa
       terser-webpack-plugin: 5.4.0(webpack@5.105.4)
       watchpack: 2.5.1
       webpack-sources: 3.3.4
