@@ -1,6 +1,6 @@
 ---
-description: 当用户输入中明确提及 MVU 时, 你应该参考本文件
-alwaysApply: false
+name: mvu-variable-framework
+description: mvu-variable-framework 是一个独立的酒馆助手脚本. 当我提及它时, 说明它已经在酒馆网页上加载好了, 且需要基于这个框架设计我自己的内容. 它作用于消息楼层变量, 允许酒馆角色卡作者在世界书中设置消息楼层变量, 在世界书或聊天记录中初始化消息楼层变量, 及用 AI 输出更新消息楼层变量. `@types/iframe/exported.mvu.d.ts` 中定义了 MVU 变量框架的接口. 如果提及到 "MVU 变量" 而非仅仅提及 "变量", 则应该优先参考本 skill, 使用 MVU 变量框架的接口.
 ---
 # MVU 变量框架
 
@@ -74,8 +74,6 @@ $(() => {
 
 为此, MVU 提供了 `parseMessage` 接口用于自行解析包含 MVU 命令的消息字符串. 它读取旧变量情况和一个消息字符串, 得到更新后的变量结果.
 
-为了更好的细粒度控制, 解析不会将结果写回消息楼层. 如果需要写回, 则应执行 `Mvu.replaceMvuData`.
-
 ```ts
 await waitGlobalInitialized('Mvu');
 
@@ -83,13 +81,26 @@ await waitGlobalInitialized('Mvu');
 const old_data = Mvu.getMvuData({ type: 'message', message_id: getCurrentMessageId() });
 
 // 请求 AI 生成
-const content = await generate({ user_input: '你好' });
+const message = await generate({ user_input: '你好' });
 
 // 解析生成结果
-const new_data = await Mvu.parseMessage(content, old_data);
+const data = await Mvu.parseMessage(message, old_data);
+```
 
+为了更好的细粒度控制, 解析不会将结果写回消息楼层, 你可以自行选择如何使用 AI 回复 `message` 和变量更新结果 `data`.
+
+也许这个 AI 请求只是为了专门进行一次变量更新, 那么你可以抛弃 `message`, 将 `data` 写回到当前楼层:
+
+```ts
 // 将更新后的变量写回楼层
-await Mvu.replaceMvuData(new_data, { type: 'message', message_id: getCurrentMessageId() });
+await Mvu.replaceMvuData(data, { type: 'message', message_id: getCurrentMessageId() });
+```
+
+也许你是想让玩家直接在同层界面里玩 AI (具体请参考{doc}`/青空莉/工具经验/实时编写前端界面或脚本/index`), 这个 AI 请求是在请求 AI 回复剧情和更新变量, 那么你可以将回复和变量创建成新的楼层:
+
+```ts
+// 将回复和变量结果创建为新的楼层
+await createChatMessages([{ role: 'assistant', message, data }]);
 ```
 
 ## 事件
