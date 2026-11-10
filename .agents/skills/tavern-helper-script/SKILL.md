@@ -1,12 +1,9 @@
 ---
-description: 当需要编写脚本时, 你应该参考本文件
-alwaysApply: false
+name: tavern-helper-script
+description: 如果 `xxx` 文件夹中仅有 `index.ts` 文件, 则它是一个酒馆助手脚本. 脚本以无沙盒 iframe 的形式在酒馆后台运行, 没有自己的界面, 只有代码部分可供编写, 其应用场景可以类比网页上的油猴脚本, 但此外它还能通过酒馆助手接口做到监听酒馆事件、操作酒馆变量等功能. 当涉及酒馆助手脚本、需要为酒馆网页增改独立组件或者涉及这些功能时, 你应该参考本 skill.
 ---
-# 脚本
 
-如果 `src/xxx` 文件夹中仅有 `index.ts` 文件, 则它是一个脚本项目.
-
-脚本以无沙盒 iframe 的形式在酒馆后台运行, 没有自己的界面, 只有代码部分可供编写.
+# 酒馆助手脚本
 
 ## jquery
 
@@ -90,7 +87,13 @@ $(() => {
 
 脚本可以在酒馆助手脚本库界面中设置按钮, 用户点击按钮时将会触发对应的事件.
 
-我们可以在代码中这样注册按钮事件:
+我们可以这样添加按钮:
+
+```typescript
+appendInexistentScriptButtons([{ name: '按钮名', visible: true }]);
+```
+
+然后, 可以在代码中这样注册按钮事件:
 
 ```typescript
 eventOn(getButtonEvent('按钮名'), () => {
